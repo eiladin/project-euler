@@ -1,0 +1,14 @@
+/home/eiladin/Code/project-euler/csharp/Euler2/bin/Debug/net8.0/Euler2
+/home/eiladin/Code/project-euler/csharp/Euler2/bin/Debug/net8.0/Euler2.deps.json
+/home/eiladin/Code/project-euler/csharp/Euler2/bin/Debug/net8.0/Euler2.runtimeconfig.json
+/home/eiladin/Code/project-euler/csharp/Euler2/bin/Debug/net8.0/Euler2.dll
+/home/eiladin/Code/project-euler/csharp/Euler2/bin/Debug/net8.0/Euler2.pdb
+/home/eiladin/Code/project-euler/csharp/Euler2/obj/Debug/net8.0/Euler2.GeneratedMSBuildEditorConfig.editorconfig
+/home/eiladin/Code/project-euler/csharp/Euler2/obj/Debug/net8.0/Euler2.AssemblyInfoInputs.cache
+/home/eiladin/Code/project-euler/csharp/Euler2/obj/Debug/net8.0/Euler2.AssemblyInfo.cs
+/home/eiladin/Code/project-euler/csharp/Euler2/obj/Debug/net8.0/Euler2.csproj.CoreCompileInputs.cache
+/home/eiladin/Code/project-euler/csharp/Euler2/obj/Debug/net8.0/Euler2.dll
+/home/eiladin/Code/project-euler/csharp/Euler2/obj/Debug/net8.0/refint/Euler2.dll
+/home/eiladin/Code/project-euler/csharp/Euler2/obj/Debug/net8.0/Euler2.pdb
+/home/eiladin/Code/project-euler/csharp/Euler2/obj/Debug/net8.0/Euler2.genruntimeconfig.cache
+/home/eiladin/Code/project-euler/csharp/Euler2/obj/Debug/net8.0/ref/Euler2.dll
