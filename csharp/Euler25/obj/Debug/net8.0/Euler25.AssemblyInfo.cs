@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Euler25")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99f7f075939218ef323132d16dc9d748ac3bf575")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ffdd0bd6611eb83f5a832b7c22f1ebcfb1d34dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Euler25")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Euler25")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

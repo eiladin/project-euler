@@ -1,10 +1,6 @@
 ﻿using System.Numerics;
 
-List<int> fibs = [];
-
-var count = Fibonacci().TakeWhile(f => f.ToString().Length < 1000).Count();
-
-Console.WriteLine(count);
+Console.WriteLine(Fibonacci().TakeWhile(f => f.ToString().Length < 1000).Count());
 
 static IEnumerable<BigInteger> Fibonacci()
 {
