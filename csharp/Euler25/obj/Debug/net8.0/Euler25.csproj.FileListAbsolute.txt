@@ -1,0 +1,15 @@
+/home/eiladin/Code/project-euler/csharp/Euler25/bin/Debug/net8.0/Euler25
+/home/eiladin/Code/project-euler/csharp/Euler25/bin/Debug/net8.0/Euler25.deps.json
+/home/eiladin/Code/project-euler/csharp/Euler25/bin/Debug/net8.0/Euler25.runtimeconfig.json
+/home/eiladin/Code/project-euler/csharp/Euler25/bin/Debug/net8.0/Euler25.dll
+/home/eiladin/Code/project-euler/csharp/Euler25/bin/Debug/net8.0/Euler25.pdb
+/home/eiladin/Code/project-euler/csharp/Euler25/obj/Debug/net8.0/Euler25.GeneratedMSBuildEditorConfig.editorconfig
+/home/eiladin/Code/project-euler/csharp/Euler25/obj/Debug/net8.0/Euler25.AssemblyInfoInputs.cache
+/home/eiladin/Code/project-euler/csharp/Euler25/obj/Debug/net8.0/Euler25.AssemblyInfo.cs
+/home/eiladin/Code/project-euler/csharp/Euler25/obj/Debug/net8.0/Euler25.csproj.CoreCompileInputs.cache
+/home/eiladin/Code/project-euler/csharp/Euler25/obj/Debug/net8.0/Euler25.sourcelink.json
+/home/eiladin/Code/project-euler/csharp/Euler25/obj/Debug/net8.0/Euler25.dll
+/home/eiladin/Code/project-euler/csharp/Euler25/obj/Debug/net8.0/refint/Euler25.dll
+/home/eiladin/Code/project-euler/csharp/Euler25/obj/Debug/net8.0/Euler25.pdb
+/home/eiladin/Code/project-euler/csharp/Euler25/obj/Debug/net8.0/Euler25.genruntimeconfig.cache
+/home/eiladin/Code/project-euler/csharp/Euler25/obj/Debug/net8.0/ref/Euler25.dll
