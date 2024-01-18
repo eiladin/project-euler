@@ -1,5 +1,4 @@
 ﻿using System.Numerics;
-using System.Runtime.CompilerServices;
 
 var digits = string.Empty;
 BigInteger minCube = -1;
