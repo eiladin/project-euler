@@ -2,7 +2,7 @@
 
 DateTime start = DateTime.Now;
 List<string> wildcards = [];
-var primes = Utils.Primes(1_000_000);
+var primes = Primes.Sieve(1_000_000);
 HashSet<string> searched = [];
 
 for (int x = 0; x < primes.Length; x++)

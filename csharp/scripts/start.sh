@@ -8,5 +8,7 @@ if [ -z "$problem" ]; then
 fi
 
 cd ..
-
 dotnet new console -n Euler$problem
+dotnet sln add ./Euler$problem/Euler$problem.csproj
+cd Euler$problem
+dotnet add reference ../Utils/Utils.csproj

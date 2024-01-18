@@ -23,5 +23,5 @@ for (var x = 1; x < 100; x++)
     denominator = e[x] * denominator + temp;
 }
 
-var result = Utils.GetDigits(denominator).Sum();
+var result = Numerics.GetDigits(denominator).Sum();
 Console.WriteLine(result);

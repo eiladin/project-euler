@@ -1,6 +1,6 @@
-﻿using System.Collections;
+﻿using Euler;
 
-var allNumbers = Primes(1_000_000);
+var allNumbers = Primes.Sieve(1_000_000);
 int max = 0;
 int maxCount = 1;
 List<int> primes = [];
@@ -36,24 +36,3 @@ foreach (int prime in primes)
     }
 }
 Console.WriteLine(max);
-
-
-static BitArray Primes(int n)
-{
-    BitArray a = new(n + 1, true);
-    int limit = (int)Math.Sqrt(n);
-    a[0] = false;
-    a[1] = false;
-    for (int i = 4; i <= n; i += 2)
-        a[i] = false;
-    for (int i = 3; i <= limit; i += 2)
-    {
-        if (a[i])
-        {
-            int step = i * 2;
-            for (int j = i * i; j <= n; j += step)
-                a[j] = false;
-        }
-    }
-    return a;
-}

@@ -1,4 +1,6 @@
 ﻿
+using Euler;
+
 var numbers = new Dictionary<(int, int), HashSet<int>>();
 for (var i = 0; i < 9; i++)
     for (var j = 0; j < 100; j++)
@@ -8,11 +10,11 @@ for (var sides = 3; sides <= 8; sides++)
 {
     for (var n = 1; ; n++)
     {
-        var num = GetNumber(sides, n);
+        var num = Numerics.GetSidedNumber(sides, n);
         if (num >= 10000)
             break;
         if (num >= 1000)
-            numbers[(sides, num / 100)].Add(num);
+            numbers[(sides, (int)num / 100)].Add((int)num);
     }
 }
 
@@ -55,5 +57,3 @@ int? FindSolutionSum(int begin, int current, int sidesUsed, int sum)
     }
     return null;
 }
-
-static int GetNumber(int sides, int n) => n * ((sides - 2) * n - (sides - 4)) / 2;

@@ -1,20 +1,5 @@
-﻿using System.Collections;
-
-static IEnumerable<int> getPrimes(int n)
-{
-    BitArray a = new(n + 1, true);
-
-    for (int i = 2; i <= Math.Sqrt(n); i++)
-    {
-        if (a[i])
-            for (int j = i * i; j <= n; j += i)
-                a[j] = false;
-    }
-
-    for (int i = 2; i <= n; i++)
-        if (a[i])
-            yield return i;
-}
+﻿using Euler;
+using System.Collections;
 
 static IEnumerable<(int, int)> getUniqueDivisors(int n)
 {
@@ -36,7 +21,7 @@ static IEnumerable<(int, int)> getUniqueDivisors(int n)
     }
 }
 
-var primes = getPrimes(20).ToArray();
+var primes = Primes.Get(20).ToArray();
 
 int[] counts = new int[21];
 for (int i = 2; i <= 20; i++)

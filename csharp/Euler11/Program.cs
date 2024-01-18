@@ -1,7 +1,6 @@
 ﻿var grid = new Grid(File.ReadAllLines("input.txt"));
 Console.WriteLine(grid.Result());
 
-
 internal class Grid(string[] input)
 {
     private readonly Dictionary<(int x, int y), int> _grid = input.SelectMany((line, y) => line.Split(' ').Select((c, x) => (c, x, y)))

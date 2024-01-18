@@ -1,4 +1,6 @@
-﻿List<int> primesSoFar = [2];
+﻿using Euler;
+
+List<int> primesSoFar = [2];
 Dictionary<int, List<int>> edgeDic = new() { { 2, new List<int>() } };
 int upperLim = int.MaxValue;
 int min = int.MaxValue;
@@ -6,7 +8,7 @@ int min = int.MaxValue;
 int lim = 3;
 while (lim < upperLim)
 {
-    if (IsPrime(lim))
+    if (Primes.IsPrime(lim))
     {
         var neighbors = new List<int>();
         foreach (var prime in primesSoFar)
@@ -45,19 +47,6 @@ while (lim < upperLim)
 
 Console.WriteLine(min);
 
-static bool IsPrime(int n)
-{
-    if (n == 2)
-        return true;
-    if (n % 2 == 0)
-        return false;
-    int lim = (int)Math.Sqrt(n);
-    for (int i = 3; i <= lim; i += 2)
-        if (n % i == 0)
-            return false;
-    return true;
-}
-
 static int AppendNumbers(int a, int b)
 {
     int c = b;
@@ -71,9 +60,9 @@ static int AppendNumbers(int a, int b)
 
 static bool GoodPair(int a, int b)
 {
-    if (!IsPrime(AppendNumbers(a, b)))
+    if (!Primes.IsPrime(AppendNumbers(a, b)))
         return false;
-    return IsPrime(AppendNumbers(b, a));
+    return Primes.IsPrime(AppendNumbers(b, a));
 }
 
 static (bool, List<int>) GetCompleteN(List<int> nodes, Dictionary<int, List<int>> edges, int N)

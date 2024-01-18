@@ -1,13 +1,11 @@
-﻿Console.WriteLine(GetTriangleNumbers().First(x => GetDivisors(x).Count > 500));
+﻿using Euler;
+
+Console.WriteLine(GetTriangleNumbers().First(x => GetDivisors(x).Count > 500));
 
 static IEnumerable<long> GetTriangleNumbers()
 {
-    long sum = 0;
     for (long i = 1; i <= long.MaxValue; i++)
-    {
-        sum += i;
-        yield return sum;
-    }
+        yield return Numerics.GetTriangle(i);
 }
 
 static List<long> GetDivisors(long number)
