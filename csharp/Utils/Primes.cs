@@ -48,4 +48,21 @@ public class Primes
                 return false;
         return true;
     }
+
+    public static Dictionary<int, List<int>> GetPrimeFactors(int n)
+    {
+        var primes = Get(n);
+        var primeFactors = new Dictionary<int, List<int>>
+        {
+            { 0, new() { 0 } }
+        };
+        for (int i = 1; i <= n; i++)
+            primeFactors.Add(i, []);
+        if (n == 1)
+            return primeFactors;
+        foreach (int i in primes.Select(v => (int)v))
+            for (int j = i; j <= n; j += i)
+                primeFactors[j].Add(i);
+        return primeFactors;
+    }
 }
