@@ -53,4 +53,7 @@ public class Numerics
                 gcd = i;
         return (numerator / gcd, denominator / gcd);
     }
+
+    public static int Lcm(int a, int b) => a * b / Gcd(a, b);
+    public static int Gcd(int a, int b) => b == 0 ? a : Gcd(b, a % b);
 }
