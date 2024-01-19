@@ -27,4 +27,30 @@ public class Numerics
         var result = (Math.Sqrt(24 * num + 1) + 1) / 6;
         return result == (int)result;
     }
+
+    public static int EulerTotient(int n)
+    {
+        int result = n;
+        for (int p = 2; p * p <= n; p++)
+            if (n % p == 0)
+            {
+                while (n % p == 0)
+                    n /= p;
+                result -= result / p;
+            }
+
+        if (n > 1)
+            result -= result / n;
+
+        return result;
+    }
+
+    public static (int Num, int Denom) ReduceFraction(int numerator, int denominator)
+    {
+        int gcd = 1;
+        for (int i = 1; i <= numerator && i <= denominator; i++)
+            if (numerator % i == 0 && denominator % i == 0)
+                gcd = i;
+        return (numerator / gcd, denominator / gcd);
+    }
 }
