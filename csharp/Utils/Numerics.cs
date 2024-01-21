@@ -55,6 +55,9 @@ public class Numerics
     }
 
     public static int Lcm(int a, int b) => a * b / Gcd(a, b);
+    public static long Lcm(long a, long b) => a * b / Gcd(a, b);
     public static int Gcd(int a, int b) => b == 0 ? a : Gcd(b, a % b);
+    public static long Gcd(long a, long b) => b == 0 ? a : Gcd(b, a % b);
     public static bool IsCoprime(int a, int b) => Gcd(a, b) == 1;
+
 }
