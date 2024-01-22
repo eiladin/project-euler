@@ -60,4 +60,14 @@ public class Numerics
     public static long Gcd(long a, long b) => b == 0 ? a : Gcd(b, a % b);
     public static bool IsCoprime(int a, int b) => Gcd(a, b) == 1;
 
+    public static IEnumerable<int> GetFactors(int num)
+    {
+        for (int i = 2; i * i <= num; i++)
+            if (num % i == 0)
+            {
+                yield return i;
+                if (i * i != num)
+                    yield return num / i;
+            }
+    }
 }
