@@ -1,29 +1,18 @@
-﻿
-int[][] matrix = File.ReadAllText("input.txt")
-    .Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)
-    .Select(line => line.Split(',').Select(int.Parse).ToArray())
-    .ToArray();
+﻿var input = File.ReadAllLines("input.txt");
 
-int result = FindMinimumPathSum(matrix);
-Console.WriteLine(result);
+Dictionary<(int, int), int> grid = input.SelectMany((row, y) => row.Split(',').Select((c, x) => ((x, y), int.Parse(c.ToString())))).ToDictionary(x => x.Item1, x => x.Item2);
 
-static int FindMinimumPathSum(int[][] matrix)
+var x = GetAllPathsThroughGrid(grid, 0, 0).Min();
+Console.WriteLine(x);
+
+static List<int> GetAllPathsThroughGrid(Dictionary<(int, int), int> grid, int x, int y)
 {
-    int rows = matrix.GetLength(0);
-    int cols = matrix[0].GetLength(0);
-
-    int[,] dp = new int[rows, cols];
-    dp[0, 0] = matrix[0][0];
-
-    for (int j = 1; j < cols; j++)
-        dp[0, j] = dp[0, j - 1] + matrix[0][j];
-
-    for (int i = 1; i < rows; i++)
-        dp[i, 0] = dp[i - 1, 0] + matrix[i][0];
-
-    for (int i = 1; i < rows; i++)
-        for (int j = 1; j < cols; j++)
-            dp[i, j] = matrix[i][j] + Math.Min(dp[i - 1, j], dp[i, j - 1]);
-
-    return dp[rows - 1, cols - 1];
+    var result = new List<int>();
+    if (x < 79)
+        result.AddRange(GetAllPathsThroughGrid(grid, x + 1, y));
+    if (y < 79)
+        result.AddRange(GetAllPathsThroughGrid(grid, x, y + 1));
+    if (x == 79 && y == 79)
+        result.Add(grid[(x, y)]);
+    return result;
 }
