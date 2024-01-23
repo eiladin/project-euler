@@ -1,3 +1,4 @@
+using System.Net.NetworkInformation;
 using System.Numerics;
 namespace Euler;
 
@@ -69,5 +70,12 @@ public class Numerics
                 if (i * i != num)
                     yield return num / i;
             }
+    }
+
+    public static IEnumerable<int> GetProperDivisors(int num)
+    {
+        yield return 1;
+        foreach (var i in GetFactors(num).Where(n => n < num))
+            yield return i;
     }
 }
