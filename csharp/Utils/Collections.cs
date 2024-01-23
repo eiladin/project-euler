@@ -21,20 +21,30 @@ public class Collections
     public static IEnumerable<List<int>> GetPermutations(List<int> digits)
     {
         if (digits.Count == 1)
-        {
             yield return digits;
-            yield break;
-        }
-        foreach (int digit in digits)
+        else
         {
-            List<int> subDigits = new(digits);
-            subDigits.Remove(digit);
-            foreach (var subPermutation in GetPermutations(subDigits))
+            foreach (int digit in digits)
             {
-                subPermutation.Insert(0, digit);
-                yield return subPermutation;
+                List<int> subDigits = new(digits);
+                subDigits.Remove(digit);
+                foreach (var subPermutation in GetPermutations(subDigits))
+                {
+                    subPermutation.Insert(0, digit);
+                    yield return subPermutation;
+                }
             }
         }
+    }
+
+    public static IEnumerable<int[]> GetPermutations(int[] digits)
+    {
+        if (digits.Length == 1)
+            yield return digits;
+        else
+            foreach (var digit in digits)
+                foreach (var perm in GetPermutations(digits.Except([digit]).ToArray()))
+                    yield return new[] { digit }.Concat(perm).ToArray();
     }
 
     public static List<string> GetPermutations(string s)
