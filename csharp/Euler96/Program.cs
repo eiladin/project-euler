@@ -1,12 +1,12 @@
 ﻿
 var input = File.ReadAllText("input.txt");
-var sum = 0;
-input.Split("Grid", StringSplitOptions.RemoveEmptyEntries).Select(p => new SudokuSolver(p)).ToList().ForEach(p =>
+var puzzles = input.Split("Grid", StringSplitOptions.RemoveEmptyEntries).Select(p =>
 {
-    p.Solve();
-    sum += p.Value;
+    var solver = new SudokuSolver(p);
+    solver.Solve();
+    return solver.Value;
 });
-Console.WriteLine(sum);
+Console.WriteLine(puzzles.Sum());
 
 internal class SudokuSolver
 {
@@ -22,7 +22,6 @@ internal class SudokuSolver
 
     public bool Solve()
     {
-
         if (!FindEmptyCell(out int row, out int col))
             return true;
 
