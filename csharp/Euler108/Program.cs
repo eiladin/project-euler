@@ -1,5 +1,4 @@
-﻿
-int target = 1000;
+﻿int target = 1000;
 var res = GetSolutions().TakeWhile(n => (n + 1) / 2 <= target).Count();
 Console.WriteLine(res);
 
@@ -31,5 +30,4 @@ static IEnumerable<int> GetSolutions()
             count *= 3;
         yield return count;
     }
-
 }
