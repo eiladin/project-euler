@@ -13,8 +13,20 @@ public class Numerics
     public static IEnumerable<int> GetDigits(int n) => GetDigits(n.ToString());
     public static IEnumerable<int> GetDigits(long n) => GetDigits(n.ToString());
     public static IEnumerable<int> GetDigits(BigInteger n) => GetDigits(n.ToString());
-    public static long Factorial(long n) => n == 0 ? 1 : n * Factorial(n - 1);
-    public static BigInteger Factorial(BigInteger n) => n == 0 ? 1 : n * Factorial(n - 1);
+    public static long Factorial(long n)
+    {
+        long result = 1;
+        for (int i = 2; i <= n; i++)
+            result *= i;
+        return result;
+    }
+    public static BigInteger Factorial(BigInteger n)
+    {
+        BigInteger result = 1;
+        for (int i = 2; i <= n; i++)
+            result *= i;
+        return result;
+    }
 
     public static long GetTriangle(long n) => GetSidedNumber(3, n);
     public static long GetPentagonal(long n) => GetSidedNumber(5, n);
