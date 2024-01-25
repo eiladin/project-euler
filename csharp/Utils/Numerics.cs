@@ -78,4 +78,32 @@ public class Numerics
         foreach (var i in GetFactors(num).Where(n => n < num))
             yield return i;
     }
+
+    public static bool IsPandigital(string s) => s.Length == 9 && !s.Contains('0') && s.Distinct().Count() == 9;
+
+    public static bool IsPandigital(long num) => IsPandigital(num.ToString());
+
+    public static IEnumerable<BigInteger> Fibonacci()
+    {
+        BigInteger a = 0;
+        BigInteger b = 1;
+        while (true)
+        {
+            yield return a;
+            (a, b) = (b, a + b);
+        }
+    }
+
+    public static IEnumerable<(int Index, BigInteger Value)> FibonacciIndex()
+    {
+        BigInteger a = 0;
+        BigInteger b = 1;
+        int i = 0;
+        while (true)
+        {
+            yield return (i, a);
+            (a, b) = (b, a + b);
+            i++;
+        }
+    }
 }
