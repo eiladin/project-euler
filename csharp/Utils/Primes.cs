@@ -1,3 +1,5 @@
+using System.Numerics;
+
 namespace Euler;
 
 public class Primes
@@ -36,14 +38,15 @@ public class Primes
 
     public static bool IsPrime(int n)
     {
-        if (n < 2)
-            return false;
-        if (n == 2)
-            return true;
-        if (n % 2 == 0)
-            return false;
-        int limit = (int)Math.Sqrt(n);
-        for (var i = 3; i <= limit; i += 2)
+        for (int i = 2; i * i <= n; ++i)
+            if (n % i == 0)
+                return false;
+        return true;
+    }
+
+    public static bool IsPrime(long n)
+    {
+        for (long i = 2; i * i <= n; ++i)
             if (n % i == 0)
                 return false;
         return true;
