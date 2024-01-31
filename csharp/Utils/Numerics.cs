@@ -91,6 +91,18 @@ public class Numerics
             yield return i;
     }
 
+    public static IEnumerable<int> GetPrimeFactors(long num)
+    {
+        for (int i = 2; i * i <= num; i++)
+            while (num % i == 0)
+            {
+                yield return i;
+                num /= i;
+            }
+        if (num > 1)
+            yield return (int)num;
+    }
+
     public static bool IsPandigital(string s) => s.Length == 9 && !s.Contains('0') && s.Distinct().Count() == 9;
 
     public static bool IsPandigital(long num) => IsPandigital(num.ToString());

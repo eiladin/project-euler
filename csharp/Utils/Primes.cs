@@ -26,6 +26,14 @@ public class Primes
         return a;
     }
 
+    public static IEnumerable<long> GetPrimesUpTo(long n)
+    {
+        var a = Sieve(n);
+        for (long i = 0; i < (long)a.Length; i++)
+            if (a[i])
+                yield return i;
+    }
+
     public static List<long> Get(long n)
     {
         var a = Sieve(n);
