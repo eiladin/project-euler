@@ -1,6 +1,5 @@
 ﻿Dictionary<int, long> memo = [];
 
-var start = DateTime.Now;
 var m = 50;
 var count = 0L;
 int i;
