@@ -1,8 +1,10 @@
 ﻿using Euler;
 
 List<int> digits = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-var permutations = Collections.GetPermutations(digits).Where(p => p.Last() % 2 != 0 || p.Count > 1 || p.Last() != 2);
-var solutions = permutations.SelectMany(p => Search(p, []).ToList());
+var solutions = Collections.GetPermutations(digits)
+                           .Where(p => p.Last() % 2 != 0 || p.Count > 1 || p.Last() != 2)
+                           .SelectMany(p => Search(p, []));
+
 Console.WriteLine(solutions.Count());
 
 static IEnumerable<List<int>> Search(List<int> digits, List<int> merged, int firstPos = 0)
