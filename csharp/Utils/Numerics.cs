@@ -103,6 +103,19 @@ public class Numerics
             yield return (int)num;
     }
 
+    public static IEnumerable<long> GetPalindromes(long limit)
+    {
+        for (long i = 1; i <= limit; i++)
+        {
+            var s = i.ToString();
+            var r = new string(s.Reverse().ToArray());
+            if (s == r)
+                yield return i;
+        }
+    }
+
+    public static bool IsPalindrome(long num) => num.ToString().Reverse().SequenceEqual(num.ToString().ToCharArray());
+
     public static bool IsPandigital(string s) => s.Length == 9 && !s.Contains('0') && s.Distinct().Count() == 9;
 
     public static bool IsPandigital(long num) => IsPandigital(num.ToString());
