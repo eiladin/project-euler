@@ -145,4 +145,21 @@ public class Numerics
             i++;
         }
     }
+
+    public static int Repunit(int n)
+    {
+        if (n % 2 == 0 || n % 5 == 0)
+            return 0;
+
+        var k = 1;
+        var s = 1;
+        var p = 1;
+        while (s % n != 0)
+        {
+            k++;
+            p = p * 10 % n;
+            s = (s + p) % n;
+        }
+        return k;
+    }
 }
