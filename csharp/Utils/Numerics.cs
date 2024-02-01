@@ -97,7 +97,8 @@ public class Numerics
             while (num % i == 0)
             {
                 yield return i;
-                num /= i;
+                while (num % i == 0)
+                    num /= i;
             }
         if (num > 1)
             yield return (int)num;
@@ -113,6 +114,7 @@ public class Numerics
                 yield return i;
         }
     }
+    public static long Radical(long n) => GetPrimeFactors(n).Distinct().Aggregate(1L, (acc, f) => acc * f);
 
     public static bool IsPalindrome(long num) => num.ToString().Reverse().SequenceEqual(num.ToString().ToCharArray());
 
