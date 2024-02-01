@@ -21,5 +21,4 @@ for (var a = 1; a < limit; a++)
     }
 }
 
-// var result = sums.Take(limit).Sum();
 Console.WriteLine(sum);
