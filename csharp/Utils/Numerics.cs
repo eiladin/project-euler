@@ -104,6 +104,19 @@ public class Numerics
             yield return (int)num;
     }
 
+    public static IEnumerable<int> GetPrimeFactors(BigInteger num)
+    {
+        for (int i = 2; i * i <= num; i++)
+            while (num % i == 0)
+            {
+                yield return i;
+                while (num % i == 0)
+                    num /= i;
+            }
+        if (num > 1)
+            yield return (int)num;
+    }
+
     public static IEnumerable<long> GetPalindromes(long limit)
     {
         for (long i = 1; i <= limit; i++)
