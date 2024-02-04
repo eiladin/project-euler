@@ -34,7 +34,7 @@ public class Numerics
     public static long GetSeptagonal(long n) => GetSidedNumber(7, n);
     public static long GetOctagonal(long n) => GetSidedNumber(8, n);
     public static long GetSidedNumber(int sides, long n) => n * ((sides - 2) * n - (sides - 4)) / 2;
-
+    public static bool IsSquare(long num) => Math.Sqrt(num) % 1 == 0;
     public static bool IsPentagonal(long num)
     {
         var result = (Math.Sqrt(24 * num + 1) + 1) / 6;
