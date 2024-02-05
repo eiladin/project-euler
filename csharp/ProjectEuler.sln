@@ -295,6 +295,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Euler144", "Euler144\Euler1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Euler145", "Euler145\Euler145.csproj", "{FDAFD339-386E-4844-818F-FDD9620B4661}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Euler146", "Euler146\Euler146.csproj", "{225AAE13-B19C-497C-92FA-24242C0E5598}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -888,5 +890,9 @@ Global
 		{FDAFD339-386E-4844-818F-FDD9620B4661}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDAFD339-386E-4844-818F-FDD9620B4661}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDAFD339-386E-4844-818F-FDD9620B4661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{225AAE13-B19C-497C-92FA-24242C0E5598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{225AAE13-B19C-497C-92FA-24242C0E5598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{225AAE13-B19C-497C-92FA-24242C0E5598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{225AAE13-B19C-497C-92FA-24242C0E5598}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
