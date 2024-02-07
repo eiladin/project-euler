@@ -117,6 +117,18 @@ public class Numerics
             yield return (int)num;
     }
 
+    public static IEnumerable<int> GetAllPrimeFactors(long num)
+    {
+        for (int i = 2; i * i <= num; i++)
+            while (num % i == 0)
+            {
+                yield return i;
+                num /= i;
+            }
+        if (num > 1)
+            yield return (int)num;
+    }
+
     public static IEnumerable<long> GetPalindromes(long limit)
     {
         for (long i = 1; i <= limit; i++)
